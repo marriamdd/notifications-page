@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "senderName": "Mark Webber",
+    "userName": "Mark Webber",
     "profilePic": "/images/avatar-mark-webber.webp",
     "action": "reacted to your recent post ",
     "post": "My first tournament today!",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "senderName": "Angela Gray ",
+    "userName": "Angela Gray ",
     "profilePic": "/images/avatar-angela-gray.webp",
     "action": "followed you",
     "time": "5m ago",
@@ -18,7 +18,7 @@
   },
   {
     "id": 3,
-    "senderName": "Jacob Thompson",
+    "userName": "Jacob Thompson",
     "profilePic": "/images/avatar-jacob-thompson.webp",
     "action": " has joined your group",
     "groupName": "Chess Club",
@@ -27,7 +27,7 @@
   },
   {
     "id": 4,
-    "senderName": "Rizky Hasanuddin",
+    "userName": "Rizky Hasanuddin",
     "profilePic": "/images/avatar-rizky-hasanuddin.webp",
     "action": "sent you a private message",
     "time": "5 days ago",
@@ -36,7 +36,7 @@
   },
   {
     "id": 5,
-    "senderName": "Kimberly Smith",
+    "userName": "Kimberly Smith",
     "profilePic": "/images/avatar-kimberly-smith.webp",
     "action": " commented on your picture",
     "userPicture": "/images/image-chess.webp",
@@ -45,7 +45,7 @@
   },
   {
     "id": 6,
-    "senderName": "Nathan Peterson",
+    "userName": "Nathan Peterson",
     "profilePic": "/images/avatar-nathan-peterson.webp",
     "action": "reacted to your recent post",
     "post": "5 end-game strategies to increase your win rate",
@@ -54,7 +54,7 @@
   },
   {
     "id": 7,
-    "senderName": "Anna Kim",
+    "userName": "Anna Kim",
     "profilePic": "/images/avatar-anna-kim.webp",
     "action": "left the group",
     "groupName": "Chess Club",

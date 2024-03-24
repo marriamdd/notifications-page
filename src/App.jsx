@@ -5,18 +5,19 @@ import { GlobalStyles } from "./Globals";
 import data from "./data.json";
 function App() {
   const [notifications, setNotifications] = useState(data);
+const notificationCounter=notifications.filter((notification)=>notification.isRead===false).length
 
   return (
     <>
       <GlobalStyles />
       <Header>
-        <h2>Notifications {}</h2>
-        <p onClick={()=>{
+        <h2>Notifications {notificationCounter}</h2>
+        <p style={{cursor:"pointer"}} onClick={()=>{
           const reset =notifications.map((message)=>{return{...message,isRead:true}})
         setNotifications(reset)
         }}>Mark all as read</p>
       </Header>
-      <main>
+      <main style={{cursor:"pointer"}}>
         {notifications.map((notification) => {
           return (
             <div

@@ -23,6 +23,13 @@ function App() {
                   : {}
               }
               key={notification.id}
+              onClick={()=>{
+                const newNotifications=notifications.map((currentMessage)=>{
+                if(notification.id===currentMessage.id){
+                  return{...currentMessage,isUnread:!currentMessage.isUnread}
+              }return currentMessage})
+              setNotifications(newNotifications)
+              }}
            >
               <img src={notification.profilePic} alt="" />
               <span>

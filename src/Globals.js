@@ -1,5 +1,3 @@
-
-
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: var(--9---White, #FFF);
+    background: var(--8---Snow, #F7FAFD);
     min-height: 100vh;
     display: flex;
     justify-content: center;

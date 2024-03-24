@@ -6,7 +6,7 @@
     "action": "reacted to your recent post ",
     "post": "My first tournament today!",
     "time": "1m ago",
-    "isUnread": true
+    "isRead": false
   },
   {
     "id": 2,
@@ -14,7 +14,7 @@
     "profilePic": "/images/avatar-angela-gray.webp",
     "action": "followed you",
     "time": "5m ago",
-    "isUnread": true
+    "isRead": false
   },
   {
     "id": 3,
@@ -23,7 +23,7 @@
     "action": " has joined your group",
     "groupName": "Chess Club",
     "time": "1 day ago",
-    "isUnread": true
+    "isRead": false
   },
   {
     "id": 4,
@@ -31,7 +31,7 @@
     "profilePic": "/images/avatar-rizky-hasanuddin.webp",
     "action": "sent you a private message",
     "time": "5 days ago",
-    "isUnread": false,
+    "isRead": true,
     "text": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
   },
   {
@@ -41,7 +41,7 @@
     "action": " commented on your picture",
     "userPicture": "/images/image-chess.webp",
     "time": "1 week ago",
-    "isUnread": false
+    "isRead": true
   },
   {
     "id": 6,
@@ -50,7 +50,7 @@
     "action": "reacted to your recent post",
     "post": "5 end-game strategies to increase your win rate",
     "time": "2 weeks ago",
-    "isUnread": false
+    "isRead": true
   },
   {
     "id": 7,
@@ -59,6 +59,6 @@
     "action": "left the group",
     "groupName": "Chess Club",
     "time": "2 weeks ago",
-    "isUnread": false
+    "isRead": true
   }
 ]

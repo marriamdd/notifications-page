@@ -21,10 +21,9 @@ function App() {
           </div>{" "}
         </h2>
         <p
-         
           onClick={() => {
             const reset = notifications.map((message) => {
-              return {...message, isRead: true };
+              return { ...message, isRead: true };
             });
             setNotifications(reset);
           }}
@@ -43,12 +42,10 @@ function App() {
 export default App;
 
 const Header = styled.header`
- display: flex;
+  display: flex;
 
-
-
-flex-wrap: nowrap;
-display: flex;
+  /* flex-wrap: nowrap; */
+  display: flex;
   flex-wrap: nowrap;
   padding: 2.8rem 1.6rem;
   background-color: var(--9---White, #fff);
@@ -57,6 +54,10 @@ display: flex;
   justify-content: center;
   align-items: center;
   gap: 7.4rem;
+  @media (min-width: 768px) {
+    width: 67rem;
+    gap: 35.6rem;
+  }
 
   & > p {
     color: var(--4---Dark-Grey-Blue, #5e6778);
@@ -67,28 +68,29 @@ display: flex;
     font-style: normal;
     font-weight: 500;
     cursor: pointer;
-    white-space: nowrap; 
+    white-space: nowrap;
+  }
+  & > p:hover {
+    color: var(--1---Blue, #0a327b);
   }
   & > h2 {
     color: var(--3---Very-Dark-Grey-Blue, #1c202b);
     font-size: 2rem;
     font-weight: 800;
     display: flex;
-    gap:0.3rem
-    
+    gap: 0.3rem;
   }
   h2 span {
     color: var(--9---White, #fff);
 
- 
     font-size: 1.6rem;
-   
+
     font-weight: 800;
-   
   }
+
   .notificationCounter {
-    width: 32px;
-    height: 25px;
+    width: 3.2rem;
+    height: 2.5;
     flex-shrink: 0;
     border-radius: 6px;
     background: var(--1---Blue, #0a327b);

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 export default function Notification({ notifications, setNotifications }) {
   return (
-    <main>
+    <Main>
       {notifications.map((notification) => {
         return (
           <Div
@@ -49,20 +49,22 @@ export default function Notification({ notifications, setNotifications }) {
                   {notification.action}{" "}
                 </SpanItem>
                 <SpanItem
-                 style={{
-                  fontWeight: "500",
-                  color: "var(--4---Dark-Grey-Blue, #5E6778)",
-                }}
+                  style={{
+                    fontWeight: "500",
+                    color: "var(--4---Dark-Grey-Blue, #5E6778)",
+                  }}
                 >
                   {" "}
                   {notification.groupName && (
-                    <SpanItem className="groupName"
-                    style={{
-                      color:" var(--1---Blue, #0A327B)",
-                      fontWeight: "700",
-                   
-
-                    }}>{notification.groupName}</SpanItem>
+                    <SpanItem
+                      className="groupName"
+                      style={{
+                        color: " var(--1---Blue, #0A327B)",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {notification.groupName}
+                    </SpanItem>
                   )}
                 </SpanItem>
                 {notification.post && (
@@ -79,35 +81,42 @@ export default function Notification({ notifications, setNotifications }) {
                 {!notification.isRead && (
                   <SpanItem>
                     <img
-                      style={{ width: "0.8rem", height: "0.8rem", marginLeft:".5rem" }}
+                      style={{
+                        width: "0.8rem",
+                        height: "0.8rem",
+                        marginLeft: ".5rem",
+                      }}
                       src="/images/Oval.svg"
                     />
                   </SpanItem>
                 )}
-              
-              
               </div>
               <Time>{notification.time}</Time>
               {notification.text && (
-                  <NotificationText>
-                    <p>{notification.text}</p>
-                  </NotificationText>
-                )}
-                 
+                <NotificationText>
+                  <p>{notification.text}</p>
+                </NotificationText>
+              )}
             </SpansContainer>
             {notification.userPicture && (
-                  <img className="userImg"
-                    style={{ width: "4.5rem", height: "4.5rem" }}
-                    src={notification.userPicture}
-                    alt=""
-                  />
-                )}{" "}
+              <img
+                className="userImg"
+                style={{ width: "4.5rem", height: "4.5rem" }}
+                src={notification.userPicture}
+                alt=""
+              />
+            )}{" "}
           </Div>
         );
       })}
-    </main>
+    </Main>
   );
 }
+const Main=styled.main`
+  border-radius: 15px;
+background: var(--9---White, #FFF);
+box-shadow: 0px 20px 60px 0px rgba(73, 97, 168, 0.05);
+`
 const Div = styled.div`
   display: flex;
 
@@ -119,11 +128,13 @@ const Div = styled.div`
   border-radius: 8px;
 
   margin-top: 1rem;
-  .userImg{
+  @media (min-width: 768px) {
+    width: 670px;
+  }
+  .userImg {
     margin-top: 1.2rem;
     cursor: pointer;
   }
-
 `;
 
 const ProfilePic = styled.img`
@@ -138,30 +149,26 @@ const ProfilePic = styled.img`
 `;
 const SpansContainer = styled.div`
   padding: 1.6rem 2.6rem 1.6rem 1.8rem;
-  max-width: 249px;
+  width: 24.9rem;
   flex-direction: column;
   justify-content: center;
 
   align-items: flex-start;
 
-
   display: flex;
 
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 
-
-
-
-  .groupName{
- cursor: pointer;
+  .groupName {
+    cursor: pointer;
     white-space: nowrap;
-  } 
-
+  }
 `;
 
 const SpanItem = styled.span`
-
-font-size: 14px;
-
+  font-size: 14px;
 `;
 
 const Time = styled.span`
@@ -178,12 +185,16 @@ const NotificationText = styled.div`
   flex-shrink: 0;
   border-radius: 5px;
   border: 1px solid var(--7---Very-Light-Grey-Blue, #dde7ee);
-  background: var(--9---White, #fff);
+
+  background-color: var(--9---White, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
-margin-top: 1rem;
-cursor: pointer;
+  margin-top: 1rem;
+  cursor: pointer;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
   p {
     color: var(--4---Dark-Grey-Blue, #5e6778);
     font-family: "Plus Jakarta Sans";
@@ -192,9 +203,13 @@ cursor: pointer;
     font-weight: 500;
     line-height: normal;
     width: 231px;
-  } &:hover{
+    @media (min-width: 768px) {
+      width: 526px;
+    }
+  }
+  &:hover {
     border-radius: 5px;
-border: 1px solid var(--7---Very-Light-Grey-Blue, #DDE7EE);
-background: var(--6---Light-Grey-Blue, #E5EFFA);
+    border: 1px solid var(--7---Very-Light-Grey-Blue, #dde7ee);
+    background: var(--6---Light-Grey-Blue, #e5effa);
   }
 `;

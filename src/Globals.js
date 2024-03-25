@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: var(--8---Snow, #F7FAFD);
+    background: var(--9---White, #FFF);
     min-height: 100vh;
     display: flex;
     justify-content: center;
